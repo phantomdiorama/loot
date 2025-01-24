@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+import sys
+import shutil
+from pathlib import Path
+
+# bail early if no file
+if len(sys.argv) < 2:
+    print("You can't drop nothing")
+    sys.exit()
+
+# set folder vars
+loot_path = Path.home() / "loot"
+drop_file = Path.home() / "loot" / sys.argv[1]
+current_dir = Path.cwd()
+
+# check folder exists
+if loot_path.is_dir():
+    pass
+else:
+    loot_path.mkdir()
+
+# check file exists and move it
+if drop_file.is_file():
+    print("file exists")
+    shutil.move(drop_file,current_dir)
+else:
+    print("no such file in loot dir")
+    sys.exit()

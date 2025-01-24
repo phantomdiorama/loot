@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import os
+from pathlib import Path
+
+# set folder path
+loot_path = Path.home() / "loot"
+
+# check folder exists
+if loot_path.is_dir():
+    pass
+else:
+    loot_path.mkdir()
+
+# list contents
+rl = os.listdir(loot_path)
+
+if not rl:
+    print("You have nothing")
+else:
+    for i in rl:
+        print(i)

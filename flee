@@ -22,4 +22,4 @@ if not rl:
 else:
     for i in rl:
         print("Runaway!")
-        shutil.move(loot_path / i,current_dir)
+        shutil.move(loot_path / i, current_dir)

@@ -1,7 +1,5 @@
 # Loot
 
-**Very WIP. Use at own risk**
-
 Move files like an old text adventure
 
 Loot is a python reimplementation of mothdotmonster’s

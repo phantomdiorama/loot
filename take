@@ -21,9 +21,8 @@ else:
 
 # check file exists
 if take_file.is_file():
-    print("You took",sys.argv[1])
-    shutil.move(take_file,loot_path)
+    print("You took", sys.argv[1])
+    shutil.move(take_file, loot_path)
 else:
     print("You can't take a file that doesn't exist")
     sys.exit()
-

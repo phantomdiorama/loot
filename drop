@@ -23,7 +23,7 @@ else:
 # check file exists and move it
 if drop_file.is_file():
     print("file exists")
-    shutil.move(drop_file,current_dir)
+    shutil.move(drop_file, current_dir)
 else:
     print("no such file in loot dir")
     sys.exit()

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""list contents of loot folder"""
 
 import os
 from pathlib import Path

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+""" move all files from loot folder to pwd"""
+
 import os
 import shutil
 from pathlib import Path

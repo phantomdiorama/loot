@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" move file from loot folder to pwd"""
+"""move file from loot folder to pwd"""
 
 import sys
 import shutil

@@ -1,27 +1,29 @@
 #!/usr/bin/env python3
 
-"""move all files from loot folder to pwd"""
+"""Flee: move all from loot folder to pwd"""
 
 import os
+import sys
 import shutil
 from pathlib import Path
 
-# set folder vars
-loot_path = Path.home() / "loot"
-current_dir = Path.cwd()
+# bail early if no file
+if len(sys.argv) < 2:
+    print("You can't drop nothing")
+    sys.exit()
 
 # check folder exists
-if loot_path.is_dir():
-    pass
-else:
-    loot_path.mkdir()
+loot_path = Path.home() / "loot"
+if not loot_path.is_dir():
+    sys.exit()
 
-# list contents
+# drop everything here
+current_dir = Path.cwd()
 rl = os.listdir(loot_path)
 
 if not rl:
     print("You have nothing")
 else:
     for i in rl:
-        print("Runaway!")
         shutil.move(loot_path / i, current_dir)
+    print("Runaway! (You dropped everything)")

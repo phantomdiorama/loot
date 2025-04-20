@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""move file into loot folder"""
+"""Take: move file into loot folder"""
 
 import sys
 import shutil
@@ -11,17 +11,21 @@ if len(sys.argv) < 2:
     print("You can't take nothing")
     sys.exit()
 
-# set folder path
-loot_path = Path.home() / "loot"
-take_file = Path.cwd() / sys.argv[1]
-
 # check folder exists
+loot_path = Path.home() / "loot"
 if loot_path.is_dir():
     pass
 else:
     loot_path.mkdir()
 
+# check if already looted
+check_file = Path.home() / "loot" / sys.argv[1]
+if check_file.is_file():
+    print("File already looted")
+    sys.exit()
+
 # check file exists
+take_file = Path.cwd() / sys.argv[1]
 if take_file.is_file():
     print("You took", sys.argv[1])
     shutil.move(take_file, loot_path)

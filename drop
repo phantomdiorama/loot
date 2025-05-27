@@ -12,7 +12,7 @@ if len(sys.argv) < 2:
     sys.exit()
 
 # check loot folder exists
-loot_path = Path.home() / "loot"
+loot_path = Path.home() / "lootbox"
 if not loot_path.is_dir():
     sys.exit()
 
@@ -23,7 +23,7 @@ if check_file.is_file():
     sys.exit()
 
 # check file exists and move it
-drop_file = Path.home() / "loot" / sys.argv[1]
+drop_file = Path.home() / "lootbox" / sys.argv[1]
 current_dir = Path.cwd()
 if drop_file.is_file():
     shutil.move(drop_file, current_dir)

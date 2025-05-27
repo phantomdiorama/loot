@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 # check folder exists
-loot_path = Path.home() / "loot"
+loot_path = Path.home() / "lootbox"
 if not loot_path.is_dir():
     print("You have no lootbox")
     sys.exit()

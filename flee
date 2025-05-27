@@ -13,7 +13,7 @@ if len(sys.argv) < 2:
     sys.exit()
 
 # check folder exists
-loot_path = Path.home() / "loot"
+loot_path = Path.home() / "lootbox"
 if not loot_path.is_dir():
     sys.exit()
 

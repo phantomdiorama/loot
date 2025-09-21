@@ -2,12 +2,12 @@
 
 Move files like an old text adventure
 
-Loot is a python reimplementation of mothdotmonster’s
+Loot is a python reimplementation of
 [inventory](https://github.com/mothdotmonster/inventory)
 
 ## Install
 
-- Loot needs a recent version of Python (3.4+)
+- Loot needs a recent-ish version of Python (3.4+)
 - Drop the 4 files into $PATH and make them executable
 
 ## Usage
